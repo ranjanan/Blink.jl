@@ -6,7 +6,7 @@ hascommand(c) =
 spawn_rdr(cmd) = spawn(cmd, Base.spawn_opts_inherit()...)
 
 resolve(pkg, path...) =
-  joinpath(Base.find_in_path(pkg, nothing), "..","..", path...) |> normpath
+  joinpath(Base.find_package(pkg), "..","..", path...) |> normpath
 
 # node-inspector
 
